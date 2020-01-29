@@ -35,7 +35,7 @@
                         <td>{{$myLease->created_at}}</td>
                         <td>
                             <a href="/delete/lease/{{$myLease->id}}">
-                                <button class="btn btn-success">Return</button>
+                                <button class="btn btn-success"><i class="fas fa-undo-alt"></i></button>
                             </a>
                         </td>
                     </tr>

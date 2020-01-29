@@ -39,7 +39,7 @@
                             <td>{{$lease->created_at}}</td>
                             <td>
                                 <a href="/delete/lease/{{$lease->id}}">
-                                    <button class="btn btn-danger">Delete</button>
+                                    <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
                                 </a>
                             </td>
                         </tr>

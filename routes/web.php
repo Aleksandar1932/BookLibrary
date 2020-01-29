@@ -41,3 +41,6 @@ Route::get('/leases','LeaseController@index');
 Route::get('/delete/lease/{id}','LeaseController@destroy');
 
 Route::get('/leases/my','LeaseController@myLeases');
+
+Route::get('/create/isbn/bulk','BookController@createISBNBulk');
+Route::post('/create/isbn/bulk','BookController@storeISBNBulk');

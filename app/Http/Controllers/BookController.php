@@ -55,12 +55,10 @@ class BookController extends Controller
         }
 
 
-        foreach($leases as $leasedBook){
+        foreach ($leases as $leasedBook) {
             $leasedBook->leasedFromSomeone = true;
             $books->push($leasedBook);
         }
-
-
 
 
         $returnArray['books'] = $books;
@@ -144,5 +142,28 @@ class BookController extends Controller
         return redirect('/home')->with('success',
             $bookTitle . ' by ' . $bookAuthor . ' has been added!');
     }
-    //
+
+    public function createISBNBulk()
+    {
+        return view('user.create_isbn_bulk');
+    }
+
+    public function storeISBNBulk(Request $request)
+    {
+        $data = $this->validate($request, [
+            'bulk_isbn' => 'required',
+            'delimiter' => 'required'
+        ]);
+
+        $isbns = explode($data['delimiter'], $data['bulk_isbn']);
+
+        foreach ($isbns as $isbn) {
+            $request = Request();
+            $request->setMethod('POST');
+            $request->request->add(['isbn' => $isbn]);
+            $this->storeISBN($request);
+        }
+
+        return view('user.create_isbn_bulk')->with('success', "addes");
+    }
 }

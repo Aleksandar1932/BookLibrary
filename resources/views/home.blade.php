@@ -24,6 +24,11 @@
                                 <div class="card-body">Add Book By ISBN</div>
                             </a>
 
+                            <a href="{{url('/create/isbn/bulk')}}"
+                               class="card bg-primary text-white p-1 m-2 col d-inline-flex align-items-center">
+                                <div class="card-body">Add Books By ISBNs</div>
+                            </a>
+
 
                         </div>
                         <div class="row">

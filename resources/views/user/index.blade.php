@@ -58,13 +58,13 @@
                         <td>{{$book->language}}</td>
                         <td>
                             <a href="/delete/book/{{$book->id}}">
-                                <button class="btn btn-danger" {{$buttonStatus}}>Delete</button>
+                                <button class="btn btn-danger" {{$buttonStatus}}><i class="fas fa-trash"></i> </button>
                             </a>
                             <a href="/edit/book/{{$book->id}}">
-                                <button class="btn btn-warning" {{$buttonStatus}}>Edit</button>
+                                <button class="btn btn-warning" {{$buttonStatus}}><i class="fas fa-edit"></i> </button>
                             </a>
                             <a href="/create/lease/{{$book->id}}">
-                                <button class="btn btn-dark" {{$buttonStatus}}>Lease</button>
+                                <button class="btn btn-dark" {{$buttonStatus}}><i class="fas fa-hand-holding"></i> </button>
                             </a>
 
                         </td>

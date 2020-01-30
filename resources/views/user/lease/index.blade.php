@@ -12,14 +12,14 @@
 
         <div class="container-fluid">
             <h1>My Leased Books</h1>
-            <h3>List of all books leased to other people.</h3>
-
+            <h3 class="d-inline">List of all books leased to other people.</h3>
             @if(!count($leases))
                 <div class="alert alert-success">
                     You don't have books leased to other people!
                 </div>
             @else
-
+                <a href="{{url('/leases/pdf')}}" class="btn btn-dark float-right">Download PDF <i
+                        class="far fa-file-pdf"></i></a>
                 <table class="table table-sm">
                     <thead>
                     <tr>

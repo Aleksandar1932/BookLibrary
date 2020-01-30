@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Book;
 
 use App\Lease;
+use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 
@@ -70,5 +71,26 @@ class LeaseController extends Controller
 
         return redirect('/home')->with('success',
             'A book has been leased to '.$data['lease_to']);
+    }
+
+    public function leases_pdf(){
+        $data['user'] = auth()->user()->email;
+        $data['timestamp'] = now();
+        $data['leases'] =  Lease::where('leased_from_id', auth()->user()->id)->get();
+
+        $pdf = PDF::loadView('pdf.leases', $data);
+        $pdf->setPaper('A4', 'portrait');
+        return $pdf->download(now()."_".'Leases'."_".$data['user']." ".'.pdf');
+
+    }
+
+    public function leases_my_pdf(){
+        $data['user'] = auth()->user()->email;
+        $data['timestamp'] = now();
+        $data['my_leases'] =  Lease::where('leased_to_id', auth()->user()->id)->get();
+
+        $pdf = PDF::loadView('pdf.leases_my', $data);
+        $pdf->setPaper('A4', 'portrait');
+        return $pdf->download(now()."_".'My_Leases'."_".$data['user']." ".'.pdf');
     }
 }

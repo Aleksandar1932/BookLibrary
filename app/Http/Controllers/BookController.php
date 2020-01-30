@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Book;
 use App\Lease;
+use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
@@ -34,6 +35,18 @@ class BookController extends Controller
         return redirect('/home')->with('success',
             $book->title . ' by ' . $book->author . ' has been added!');
 
+    }
+
+    public function pdf(){
+
+        $data['user'] = auth()->user()->email;
+        $data['timestamp'] = now();
+        $data['books'] =  Book::where('user_id', auth()->user()->id)->get();
+
+
+        $pdf = PDF::loadView('pdf.books', $data);
+        $pdf->setPaper('A4', 'portrait');
+        return $pdf->download(now()."_".'My Library'."_".$data['user']." ".'.pdf');
     }
 
     public function index()

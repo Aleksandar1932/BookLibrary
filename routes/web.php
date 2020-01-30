@@ -44,3 +44,10 @@ Route::get('/leases/my','LeaseController@myLeases');
 
 Route::get('/create/isbn/bulk','BookController@createISBNBulk');
 Route::post('/create/isbn/bulk','BookController@storeISBNBulk');
+
+//Pdf routes
+Route::get('/books/pdf','BookController@pdf');
+Route::get('/leases/pdf','LeaseController@leases_pdf');
+Route::get('/leases/my/pdf','LeaseController@leases_my_pdf');
+
+

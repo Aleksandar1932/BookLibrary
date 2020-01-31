@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ Auth::user()->name }}'s <strong>BookLibrary da si jadas noso</strong></div>
+                    <div class="card-header">{{ Auth::user()->name }}'s <strong>BookLibrary</strong></div>
 
                     <div class="card-body">
                         @if(\Session::has('success'))

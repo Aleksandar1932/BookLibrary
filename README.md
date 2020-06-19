@@ -2,6 +2,12 @@
 
 **BookLibrary** is a web application that allows users to manage their books and lease books between each other.
 
+The app is available on the following <a href="http://vast-citadel-91743.herokuapp.com">link</a>.
+
+Demo user:
+
+    E-Mail Address: demo@demo.com
+    Password: demodemo123
 
 ## Features
 **BookLibrary** offers the following features:
@@ -38,4 +44,5 @@ I am planning to implement the following features to **BookLibrary**:
 <li>Native Android and iOS app</li>
 </ul>
 
-Made with ❤ by Aleksandar Ivanovski
+
+<center>Made with ❤ by Aleksandar Ivanovski</center>

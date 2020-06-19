@@ -1,23 +1,41 @@
-## BookLibrary
+## 📚BookLibrary
 
-**BookLibrary** is a web application that allows it's users to manage their book collections, and to lease books between each other.
+**BookLibrary** is a web application that allows users to manage their books and lease books between each other.
+
 
 ## Features
-**BookLibrary** offers the following features <br/>
-    - Complete user system; <br/>
-    - Adding books manually - with filling their information; <br/> 
-    - Adding books by ISBN - single mode and bulk mode; <br/> 
-    - Keeping track of books leased to other people; <br/> 
-    - Keeping track of books leased from other people; <br/> 
+**BookLibrary** offers the following features:
+
+<ul>
+<li>Per-user book library</li>
+
+<li>Adding custom books:
+<ul>
+<li>manually filling out the book details</li>
+<li>adding book by ISBN (fetching info from Google Books API)</li>
+<li>adding multiple books by a list of ISBNs</li>
+</ul>
+</li>
+<li>Leasing books to other users</li>
+<li>Leasing books from other users</li>
+<li>Various reports, including:
+<ul>
+<li>Whole book library PDF report</li>
+<li>Leased books to other users PDF report</li>
+<li>Leased books from others PDF report</li>
+</ul>
+</li>
+</ul>
+
+
 ## Planned Features
-I am planning to implement the following features to **BookLibrary** <br/>
-    - Statistics module with various statistics; <br/>
-    - Exports (to .csv .xlsx .pdf); <br/>
-    - Imports (from .csv .xlsx); <br/>
+I am planning to implement the following features to **BookLibrary**:
 
-## About the developer
-**BookLibrary** is developed by _Aleksandar Ivanovski_, a second year student at FINKI, with passion for web applications and data managment.
-**BookLibrary** is developed using the Laravel framework.
+<ul>
+<li>Various statistics</li>
+<li>OAuth</li>
+<li>Friendship system</li>
+<li>Native Android and iOS app</li>
+</ul>
 
-linkedin: [https://www.linkedin.com/in/aleksandar-i-9a9b9310b/]
-
+Made with ❤ by Aleksandar Ivanovski

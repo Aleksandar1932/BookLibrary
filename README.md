@@ -4,10 +4,19 @@
 
 The app is available on the following <a href="http://vast-citadel-91743.herokuapp.com">link</a>.
 
-Demo user:
+### Demo user:
 
     E-Mail Address: demo@demo.com
     Password: demodemo123
+    
+### Sample data:
+#### Data
+
+    9781410355201;9783938484135;9780142437230;9780984782857;9781585424337;9781484722886;9781504033046;9781484722886;9781423140511;9781448754878;9781609258764;9781609253509;9781619400146;9781609255787;9781619400252;9781560978923;9781939438638;9781118794760;0201633612;9781782893226
+    
+#### Delimiter:
+
+    ;
 
 ## Features
 **BookLibrary** offers the following features:
